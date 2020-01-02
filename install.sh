@@ -37,3 +37,4 @@ Add the following lines to /etc/prometheus/prometheus.yml:
 scrape_interval: 5s
 static_configs:
   - targets: ['PROMETHEUS-SERVER-IP:9100']
+  "
