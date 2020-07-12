@@ -28,7 +28,11 @@ WantedBy=multi-user.target' > /etc/systemd/system/node_exporter.service
 systemctl daemon-reload
 systemctl start node_exporter
 systemctl enable node_exporter
- 
+
+# delete tmp files
+cd ..
+rm node_exporter-${NODE_EXPORTER_VERSION}.linux-amd64.tar.gz
+rm -rf node_exporter-${NODE_EXPORTER_VERSION}.linux-amd64
  
 echo "Setup complete.
 Add the following lines to /etc/prometheus/prometheus.yml:
