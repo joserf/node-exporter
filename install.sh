@@ -36,5 +36,5 @@ Add the following lines to /etc/prometheus/prometheus.yml:
   - job_name: '`hostname`'
 scrape_interval: 5s
 static_configs:
-  - targets: ['PROMETHEUS-SERVER-IP:9100']
+  - targets: ['`hostname -I | cut -f1 -d' '`:9100']
   "
